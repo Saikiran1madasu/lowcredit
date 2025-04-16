@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BallGame</title>
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="../assets/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&display=swap" rel="stylesheet">
+
+  <style>
+    .top-menu {
+      position: fixed;
+      z-index: 999;
+      top: 0px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px;
+      /* border-radius: 0 0 8px 8px; */
+      /* border-bottom: 1px solid #415763; */
+      background-color: rgba(0, 0, 0, 0.466);
+      font-family: "Oxanium", sans-serif;
+      color: white;
+      text-decoration: none;
+      left: 0px;
+    }
+
+    .logo {
+      width: 150px;
+      background-color: white;
+      border-radius: 30px;
+      padding: 0px 10px;
+      color: white;
+    }
+
+    .logo-text {
+      background: linear-gradient(0deg, #cacaca 0%, #ffffff 75%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: 600;
+      font-family: "Oxanium", sans-serif !important;
+      text-decoration: none;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    .back {
+      width: 45px;
+      background-color: white;
+      border-radius: 15px;
+    }
+
+    .developed {
+      margin-top: 10px;
+      text-align: center;
+    }
+
+    .developed a {
+      font-weight: 600;
+    }
+
+    @media screen and (max-width: 700px) {
+
+      .logo {
+        width: 100px;
+        height: auto;
+      }
+
+      .logo-text {
+        font-size: 16px;
+        /* margin-top: 10px; */
+      }
+    }
+
+    @media screen and (min-width: 701px) {
+      .back {
+        width: 60px;
+        background-color: white;
+        border-radius: 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="top-menu">
+    <div class="top-menu">
+      <div class="d-flex col-10 gap-lg-3 gap-2 align-items-center">
+        <a href="../index.html" class="back">
+          <img src="../assets/images/back.svg" alt="back">
+        </a>
+        <a href="../index.html" class="d-flex gap-2 align-items-center">
+          <img src="../assets/images/logo.png" alt="logo" class="logo">
+          <h4 class="logo-text m-0">LOW CREDIT <br> GAMES</h4>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="container full">
+    <div class="menu-square">
+      <h1>Sort Ball</h1>
+    </div>
+    <div class="start-box">
+      <h2>Select Level</h2>
+      <a class="button" href="easy.html">Easy</a>
+      <a class="button" href="medium.html">Medium</a>
+      <a class="button" href="hard.html">Hard</a>
+    </div>
+    <p class="developed">Developed by the original owner, <a href="https://github.com/ErykFryderyk">Grzegorz Kostrzewa</a>.
+    </p>
+  </div>
+
+</body>
+
+</html>

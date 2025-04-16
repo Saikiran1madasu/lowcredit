@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>word scramble</title>
+    <link href="style.css" rel="stylesheet" />
+    <script src="script.js" defer></script>
+
+    <link rel="stylesheet" href="../assets/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&display=swap" rel="stylesheet">
+
+    <style>
+        .top-menu {
+            position: fixed;
+            z-index: 999;
+            top: 0px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 16px;
+            border-radius: 0 0 8px 8px;
+            /* border-bottom: 1px solid #415763; */
+            background-color: rgba(255, 255, 255, 0.0);
+            font-family: "Oxanium", sans-serif;
+            color: white;
+            text-decoration: none;
+        }
+
+        .logo {
+            width: 150px;
+            background-color: white;
+            border-radius: 30px;
+            padding: 0px 10px;
+            color: white;
+        }
+
+        .logo-text {
+            background: linear-gradient(0deg, #cacaca 0%, #ffffff 75%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 600;
+            font-family: "Oxanium", sans-serif !important;
+            text-decoration: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .back {
+            width: 45px;
+            background-color: white;
+            border-radius: 15px;
+        }
+
+        .developed {
+            margin-top: 10px;
+            text-align: center;
+        }
+
+        .developed a {
+            font-weight: 600;
+        }
+
+
+        @media screen and (max-width: 700px) {
+
+            .logo {
+                width: 100px;
+                height: auto;
+            }
+
+            .logo-text {
+                font-size: 16px;
+                /* margin-top: 10px; */
+            }
+        }
+
+        @media screen and (min-width: 701px) {
+            .back {
+                width: 60px;
+                background-color: white;
+                border-radius: 20px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+
+    <div class="top-menu">
+        <div class="d-flex col-10 gap-lg-3 gap-2 align-items-center">
+            <a href="../index.html" class="back">
+                <img src="../assets/images/back.svg" alt="back">
+            </a>
+            <a href="../index.html" class="d-flex gap-2 align-items-center">
+                <img src="../assets/images/logo.png" alt="logo" class="logo">
+                <h4 class="logo-text m-0">LOW CREDIT <br> GAMES</h4>
+            </a>
+        </div>
+    </div>
+
+    <div class="pre-loader">
+        <div class="loader"></div>
+    </div>
+    <div class="root">
+        <h1 class="title">
+            <img src="./assets/title.png" alt="Word Scramble Game" />
+        </h1>
+        <div id="scrambled">
+            <h4 class="heading">Look at the hint and give the perfect answer (find the <b>Riddle Word</b>)
+            </h4>
+            <h2 class="heading1" id="scrambleWord">Word</h2>
+            <p id="hint"></p>
+        </div>
+        <div id="form">
+            <input id="input" type="text" placeholder="Guess correct word"
+                style="border-radius: 10px; border: 2px solid #f7a961; padding: 10px; font-size: 20px;">
+        </div>
+        <h3 id="output">Result:</h3>
+        <div class="foot">
+            <button class="refresh" type="button" onclick="refresh()">
+                Refresh
+            </button>
+            <button type="button" onclick="check()">
+                Check
+            </button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script>
+        window.addEventListener('load', function () {
+            document.querySelector('.pre-loader').style.transition = "opacity 0.5s";
+            document.querySelector('.pre-loader').style.opacity = "0";
+            setTimeout(() => {
+                document.querySelector('.pre-loader').style.display = "none";
+            }, 500);
+            document.querySelector('body').style.overflowY = 'auto'
+        });
+    </script>
+</body>
+
+</html>

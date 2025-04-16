@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tetris Game</title>
+  <link rel="stylesheet" href="../assets/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background: url(../assets/images/games_images/tetris.webp) no-repeat center center fixed;
+      background-size: cover;
+      backdrop-filter: blur(20px);
+      color: #fff;
+      font-family: sans-serif;
+      font-size: 2em;
+      text-align: center;
+      height: 100vh;
+      overflow: clip;
+    }
+
+    .top-menu {
+      /* position: fixed; */
+      z-index: 999;
+      top: 0px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px;
+      border-radius: 0 0 8px 8px;
+      /* border-bottom: 1px solid #415763; */
+      background-color: rgba(255, 255, 255, 0.0);
+      font-family: "Oxanium", sans-serif;
+      color: white;
+      text-decoration: none;
+    }
+
+    .logo {
+      width: 120px;
+      background-color: white;
+      border-radius: 30px;
+      padding: 0px 10px;
+      color: white;
+    }
+
+    .logo-text {
+      background: linear-gradient(0deg, #cacaca 0%, #ffffff 75%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: 600;
+      font-family: "Oxanium", sans-serif !important;
+      text-decoration: none;
+      text-align: start;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    #score {
+      color: black;
+    }
+
+    canvas {
+      border: solid 0.2em #fff;
+      height: 65vh;
+      width: 80vw;
+    }
+ 
+    #controls {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      position: relative;
+      bottom: -2%;
+      left: 50%;
+      font-size: 40%;
+      transform: translateX(-50%);
+      width: 100%;
+    }
+
+    /* Button Styles */
+    button {
+      background: black;
+      border: 3px solid white;
+      width: 60px;
+      height: 60px;
+      font-size: 2.5em;
+      color: white;
+      text-align: center;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: transform 0.1s, background 0.2s;
+    }
+
+    button:hover {
+      transform: scale(1.1);
+    }
+
+    button:active {
+      background: #333;
+    }
+
+    .developed {
+      font-size: 12px;
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    .back {
+      width: 45px;
+      background-color: white;
+      border-radius: 15px;
+    }
+
+    .developed a {
+      font-weight: 600;
+    }
+
+
+
+    @media (min-width: 600px) {
+      #controls {
+        gap: 10px;
+        font-size: 25px;
+      }
+
+      button {
+        width: 90px;
+        height: 90px;
+        font-size: 1.5em;
+      }
+
+      canvas {
+        width: 500px;
+      }
+
+
+      @media screen and (max-width: 700px) {
+
+        .logo {
+          width: 100px;
+          height: auto;
+        }
+
+        .logo-text {
+          font-size: 16px;
+          /* margin-top: 10px; */
+        }
+      }
+
+
+      @media screen and (min-width: 701px) {
+        .back {
+          width: 60px;
+          background-color: white;
+          border-radius: 20px;
+        }
+
+        .logo {
+          width: 150px;
+          background-color: white;
+          border-radius: 30px;
+          padding: 0px 10px;
+          color: white;
+        }
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="top-menu">
+    <div class="d-flex col-10 gap-lg-3 gap-2 align-items-center">
+      <a href="../index.html" class="back">
+        <img src="../assets/images/back.svg" alt="back">
+      </a>
+      <a href="../index.html" class="d-flex gap-2 align-items-center">
+        <img src="../assets/images/logo.png" alt="logo" class="logo">
+        <h4 class="logo-text m-0">LOW CREDIT <br> GAMES</h4>
+      </a>
+    </div>
+  </div>
+
+
+  <div style=" display: flex; justify-content: center; align-items: center; flex-direction: column;">
+    <div id="score">Score: 0</div>
+    <canvas id="tetris" width="240" height="400"></canvas>
+  </div>
+  <!-- Controls - Positioned Below Canvas -->
+  <div id="controls">
+    <button id="leftBtn">←</button>
+    <button id="downBtn">↓</button>
+    <button id="rightBtn">→</button>
+    <button id="rotateBtn">↻</button>
+  </div>
+
+  <p class="developed">Developed by the original owner, <a href="https://github.com/HotShot003">Anurag Padhiyar</a>.
+  </p>
+
+
+  <script src="app.js"></script>
+  <script>
+    document.getElementById('leftBtn').addEventListener('click', () => playerMove(-1));
+    document.getElementById('rightBtn').addEventListener('click', () => playerMove(1));
+    document.getElementById('downBtn').addEventListener('click', playerDrop);
+    document.getElementById('rotateBtn').addEventListener('click', () => playerRotate(1));
+  </script>
+</body>
+
+</html>

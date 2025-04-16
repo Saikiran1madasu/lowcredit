@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&display=swap" rel="stylesheet">
+
+    <script src="script.js" defer></script>
+    <title>Tic Tac Toe</title>
+
+    <style>
+        .top-menu {
+            position: fixed;
+            z-index: 999;
+            top: 0px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 16px;
+            border-radius: 0 0 8px 8px;
+            /* border-bottom: 1px solid #415763; */
+            background-color: rgba(0, 0, 0, 0);
+            font-family: "Oxanium", sans-serif;
+            color: white;
+            text-decoration: none;
+        }
+
+        .logo {
+            width: 150px;
+            background-color: white;
+            border-radius: 30px;
+            padding: 0px 10px;
+            color: white;
+        }
+
+        .logo-text {
+            background: linear-gradient(0deg, #000 0%, #000 75%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 600;
+            font-family: "Oxanium", sans-serif !important;
+            text-decoration: none;
+            margin-left: 5px;
+            font-size: 25px;
+            text-align: start;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .d-flex {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .back {
+            width: 45px;
+            background-color: white;
+            border-radius: 15px;
+            display: flex;
+        }
+
+        .developed {
+            margin-top: 10px;
+            text-align: center;
+        }
+
+        .developed a {
+            font-weight: 600;
+        }
+
+        @media screen and (max-width: 700px) {
+
+            .logo {
+                width: 100px;
+                height: auto;
+            }
+
+            .logo-text {
+                font-size: 16px;
+                /* margin-top: 10px; */
+            }
+        }
+
+        @media screen and (min-width: 701px) {
+      .back {
+        width: 60px;
+        background-color: white;
+        border-radius: 20px;
+      }
+    }
+    </style>
+</head>
+
+<body>
+    <div class="top-menu">
+        <div class="d-flex col-10 gap-lg-3 gap-2 align-items-center">
+            <a href="../index.html" class="back">
+                <img src="../assets/images/back.svg" alt="back">
+            </a>
+            <a href="../index.html" class="d-flex gap-2 align-items-center">
+                <img src="../assets/images/logo.png" alt="logo" class="logo">
+                <h4 class="logo-text m-0">LOW CREDIT <br> GAMES</h4>
+            </a>
+        </div>
+    </div>
+
+    <div class="title">
+        <p>Tic Tac Toe</p>
+    </div>
+    <div class="mode-selection">
+        <button id="friend-mode" class="mode-btn active">Play with Friend</button>
+        <button id="machine-mode" class="mode-btn">Play with Machine</button>
+    </div>
+
+    <div class="msg-container hide">
+        <p id="msg">Winner</p>
+    </div>
+
+    <main>
+
+        <div class="container">
+            <div class="game">
+                <button class="box"></button>
+                <button class="box"></button>
+                <button class="box"></button>
+                <button class="box"></button>
+                <button class="box"></button>
+                <button class="box"></button>
+                <button class="box"></button>
+                <button class="box"></button>
+                <button class="box"></button>
+            </div>
+        </div>
+        <button id="reset">Reset Game</button>
+    </main>
+</body>
+
+</html>

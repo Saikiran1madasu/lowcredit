@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Low Credit Games</title>
+    <link rel="stylesheet" href="./assets/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/styles.css">
+    <script src="./assets/bootstrap.bundle.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&display=swap" rel="stylesheet">
+    <style>
+        .new-release {
+            position: relative;
+        }
+
+        .new-release::before {
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding: 5px 10px;
+            border-radius: 0px 0px 8px 0px;
+            border: 1px solid #415763;
+            border-right: 1px solid white;
+            border-bottom: 1px solid white;
+            /* transform: rotate(60deg); */
+            content: 'New Release';
+            background-image: linear-gradient(to bottom, #ff5050, #ff0000);
+            color: white;
+            z-index: 998;
+        }
+
+        a {
+            color: #a3daf8;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="pre-loader">
+        <div class="loader"></div>
+    </div>
+    <main class="container-fluid p-0">
+        <div class="top-menu">
+            <div class="d-flex col-10 gap-lg-3 gap-2 align-items-center ">
+                <button title="menu" onclick="togglesidebar()" class="navbar-toggler d-lg-none d-md-none d-block"
+                    type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse">
+                    <img src="./assets/images/menu.svg" alt="" width="" class="menu">
+                </button>
+                <a href="index.html" class="d-flex gap-2 align-items-center">
+                    <img src="./assets/images/logo.png" alt="logo" class="logo">
+                    <h4 class="logo-text m-0">LOW CREDIT <br> GAMES</h4>
+                </a>
+            </div>
+        </div>
+        <div class="row h-100 side-bar-con">
+            <div class="side-bar h-100 d-flex justify-content-between flex-column">
+                <div>
+                    <a href="./index.html">
+                        <div class="d-flex align-items-center col-12 gap-3 mt-3">
+                            <img src="./assets/images/home.svg" alt="image" class="side-bar-icon">
+                            <span class="side-bar-text">Home</span>
+                        </div>
+                    </a>
+                    <a href="./about.html">
+                        <div class="d-flex align-items-center col-12 gap-3 mt-3">
+                            <img src="./assets/images/info.svg" alt="image" class="side-bar-icon">
+                            <span class="side-bar-text">About</span>
+                        </div>
+                    </a>
+                    <a href="#latest">
+                        <div class="d-flex align-items-center col-12 gap-3 mt-3">
+                            <img src="./assets/images/joystick.svg" alt="image" class="side-bar-icon">
+                            <span class="side-bar-text">Latest Released Games</span>
+                        </div>
+                    </a>
+                    <a href="#upcoming">
+                        <div class="d-flex align-items-center col-12 gap-3 mt-3">
+                            <img src="./assets/images/new_release.svg" alt="image" class="side-bar-icon">
+                            <span class="side-bar-text">Upcoming Games</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="border-t">
+                    <a href="privacy-policy.html">
+                        <div class="d-flex align-items-center col-12 gap-3 mt-3">
+                            <img src="./assets/images/security.svg" alt="image" class="side-bar-icon">
+                            <span class="side-bar-text">Privacy Policy</span>
+                        </div>
+                    </a>
+                    <a href="terms.html">
+                        <div class="d-flex align-items-center col-12 gap-3 mt-3">
+                            <img src="./assets/images/t&c.svg" alt="image" class="side-bar-icon">
+                            <span class="side-bar-text">Terms & conditions</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="games-container col-12">
+                <div class="mb-3 game-banners">
+                    <div id="carouselExampleRide" class="carousel slide" data-bs-ride="true">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="carousel-image">
+                                    <div class="carousel-text col-lg-8 col-12 p-5">
+                                        <h1 class="text-white col-lg-8 col-12">Cross the Road with Your Friends</h1>
+                                        <p class="text-white col-lg-8 col-12">Cross the road by guiding
+                                            them through the busy traffic.</p>
+                                        <a href="./Crossy_Road_Game/index.html" class="btn btn-lg btn-warning fw-bold">Play
+                                            Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item ">
+                                <div class="carousel-image">
+                                    <div class="carousel-text col-lg-8 col-12 p-5">
+                                        <h1 class="text-white col-lg-8 col-12">Build the Tallest Tower with Your
+                                            Friends</h1>
+                                        <p class="text-white col-lg-8 col-12">Work together to build the tallest tower
+                                            by
+                                            keeping the bricks in place and avoiding them breaking.</p>
+                                        <a href="./Tower-Blocks/index.html" class="btn btn-lg btn-warning fw-bold">Play
+                                            Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="carousel-image">
+                                    <div class="carousel-text col-lg-8 col-12 p-5">
+                                        <h1 class="text-white col-lg-8 col-12">Play Tic Tac Toe with Your Friends</h1>
+                                        <p class="text-white col-lg-8 col-12">Challenge your friends in a game of Tic
+                                            Tac Toe and see who can win first.</p>
+                                        <a href="./Tic-Tac-Toe/index.html" class="btn btn-lg btn-warning fw-bold">Play
+                                            Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleRide"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="mt-5">
+                    <h4 class="text-white" id="latest">Latest Released Games</h4>
+                </div>
+                <div class="row row-cols-2 row-cols-md-4 g-3">
+
+                    <a href="./Crossy_Road_Game/index.html">
+                        <div class="game-item col-12 new-release">
+                            <div class="col-12 game-image">
+                                <img src="./assets/images/games_images/crossy_road.webp" class="game-inner-image"
+                                    width="100%" alt="Game Image">
+                            </div>
+                            <p class="game-name">Crossy Road</p>
+                        </div>
+                    </a>
+                    <a href="./flappy_bird/index.html">
+                        <div class="game-item col-12 new-release">
+                            <div class="col-12 game-image">
+                                <img src="./assets/images/games_images/flappy_bird.webp" class="game-inner-image"
+                                    width="100%" alt="Game Image">
+                            </div>
+                            <p class="game-name">Flappy Bird</p>
+                        </div>
+                    </a>
+                    <a href="./snake-game/index.html">
+                        <div class="game-item col-12 new-release">
+                            <div class="col-12 game-image">
+                                <img src="./assets/images/games_images/snake_rush.webp" class="game-inner-image"
+                                    width="100%" alt="Game Image">
+                            </div>
+                            <p class="game-name">Snake Rush</p>
+                        </div>
+                    </a>
+                    <a href="./Tic-Tac-Toe/index.html">
+                        <div class="game-item col-12">
+                            <div class="col-12 game-image new-release">
+                                <img src="./assets/images/games_images/tic_tac_toe.webp" class="game-inner-image"
+                                    width="100%" alt="Game Image">
+                            </div>
+                            <p class="game-name">Tic Tac Toe</p>
+                        </div>
+                    </a>
+                    <a href="./Tower-Blocks/index.html">
+                        <div class="game-item col-12 new-release">
+                            <div class="col-12 game-image">
+                                <img src="./assets/images/games_images/tower_blocks.webp" class="game-inner-image"
+                                    width="100%" alt="Game Image">
+                            </div>
+                            <p class="game-name">Tower Blocks</p>
+                        </div>
+                    </a>
+                    <a href="./sort_ball/index.html">
+                        <div class="game-item col-12 new-release">
+                            <div class="col-12 game-image">
+                                <img src="./assets/images/games_images/sort_ball.webp" class="game-inner-image"
+                                    width="100%" alt="Game Image">
+                            </div>
+                            <p class="game-name">Sort Ball</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="boarder"></div>
+
+                <div class="mt-4">
+                    <h4 class="text-white">Featured Games</h4>
+                </div>
+                <div class="row row-cols-2 row-cols-md-4 g-3">
+
+                    <a href="./Crossy_Road_Game/index.html">
+                        <div class="game-item col-12 new-release">
+                            <div class="col-12 game-image">
+                                <img src="./assets/images/games_images/crossy_road.webp" class="game-inner-image"
+                                    width="100%" alt="Game Image">
+                            </div>
+                            <p class="game-name">Crossy Road</p>
+                        </div>
+                    </a>
+                    <a href="./word_scrumble/index.html">
+                        <div class="game-item col-12 ">
+                            <div class="col-12 game-image">
+                                <img src="./assets/images/games_images/words_scramble.webp" class="game-inner-image"
+                                    width="100%" alt="Game Image">
+                            </div>
+                            <p class="game-name">Words Scramble</p>
+                        </div>
+                    </a>
+                    <a href="./Tetris-Game/index.html">
+                        <div class="game-item col-12">
+                            <div class="col-12 game-image">
+                                <img src="./assets/images/games_images/tetris.webp" class="game-inner-image"
+                                    width="100%" alt="Game Image">
+                            </div>
+                            <p class="game-name">Tetris</p>
+                        </div>
+                    </a>
+                    <a href="./flappy_bird/index.html">
+                        <div class="game-item col-12 new-release">
+                            <div class="col-12 game-image">
+                                <img src="./assets/images/games_images/flappy_bird.webp" class="game-inner-image"
+                                    width="100%" alt="Game Image">
+                            </div>
+                            <p class="game-name">Flappy Bird</p>
+                        </div>
+                    </a>
+                    <a href="./memory_card/index.html">
+                        <div class="game-item col-12">
+                            <div class="col-12 game-image">
+                                <img src="./assets/images/games_images/memory_match.webp" class="game-inner-image"
+                                    width="100%" alt="Game Image">
+                            </div>
+                            <p class="game-name">Memory Match</p>
+                        </div>
+                    </a>
+                    <a href="./2048-master/index.html">
+                        <div class="game-item col-12">
+                            <div class="col-12 game-image">
+                                <img src="./assets/images/games_images/2048.webp" class="game-inner-image" width="100%"
+                                    alt="Game Image">
+                            </div>
+                            <p class="game-name">2048</p>
+                        </div>
+                    </a>
+                    <a href="./snake-game/index.html">
+                        <div class="game-item col-12 new-release">
+                            <div class="col-12 game-image">
+                                <img src="./assets/images/games_images/snake_rush.webp" class="game-inner-image"
+                                    width="100%" alt="Game Image">
+                            </div>
+                            <p class="game-name">Snake Rush</p>
+                        </div>
+                    </a>
+                    <a href="./Tic-Tac-Toe/index.html">
+                        <div class="game-item col-12">
+                            <div class="col-12 game-image new-release">
+                                <img src="./assets/images/games_images/tic_tac_toe.webp" class="game-inner-image"
+                                    width="100%" alt="Game Image">
+                            </div>
+                            <p class="game-name">Tic Tac Toe</p>
+                        </div>
+                    </a>
+
+                    <a href="./Tower-Blocks/index.html">
+                        <div class="game-item col-12 new-release">
+                            <div class="col-12 game-image">
+                                <img src="./assets/images/games_images/tower_blocks.webp" class="game-inner-image"
+                                    width="100%" alt="Game Image">
+                            </div>
+                            <p class="game-name">Tower Blocks</p>
+                        </div>
+                    </a>
+                    <a href="./Insect_Catch_Game/index.html">
+                        <div class="game-item col-12">
+                            <div class="col-12 game-image">
+                                <img src="./assets/images/games_images/insect_catch.webp" class="game-inner-image"
+                                    width="100%" alt="Game Image">
+                            </div>
+                            <p class="game-name">Insect Catch</p>
+                        </div>
+                    </a>
+                    <a href="./breakout/index.html">
+                        <div class="game-item col-12">
+                            <div class="col-12 game-image">
+                                <img src="./assets/images/games_images/breakout.webp" class="game-inner-image"
+                                    width="100%" alt="Game Image">
+                            </div>
+                            <p class="game-name">Breakout</p>
+                        </div>
+                    </a>
+                    <a href="./sort_ball/index.html">
+                        <div class="game-item col-12 new-release">
+                            <div class="col-12 game-image">
+                                <img src="./assets/images/games_images/sort_ball.webp" class="game-inner-image"
+                                    width="100%" alt="Game Image">
+                            </div>
+                            <p class="game-name">Sort Ball</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="boarder"></div>
+
+                <div class="mt-4">
+                    <h4 class="text-white" id="upcoming">Upcoming Games</h4>
+                </div>
+                <div class="row row-cols-2 row-cols-md-4 g-3">
+
+                    <a href="#" class="not_clickable">
+                        <div class="game-item col-12">
+                            <div class="col-12 game-image">
+                                <img src="./assets/images/upcomming/mouse_run.webp" class="game-inner-image"
+                                    width="100%" alt="Game Image">
+                            </div>
+                            <p class="game-name">Mouse Run</p>
+                        </div>
+                    </a>
+                    <a href="#" class="not_clickable">
+                        <div class="game-item col-12 ">
+                            <div class="col-12 game-image">
+                                <img src="./assets/images/upcomming/pumpkins.webp" class="game-inner-image" width="100%"
+                                    alt="Game Image">
+                            </div>
+                            <p class="game-name">Pumpkins Halloween</p>
+                        </div>
+                    </a>
+                    <a href="#" class="not_clickable">
+                        <div class="game-item col-12">
+                            <div class="col-12 game-image">
+                                <img src="./assets/images/upcomming/santa_slide.webp" class="game-inner-image"
+                                    width="100%" alt="Game Image">
+                            </div>
+                            <p class="game-name">Santa Slide</p>
+                        </div>
+                    </a>
+                    <a href="#" class="not_clickable">
+                        <div class="game-item col-12">
+                            <div class="col-12 game-image">
+                                <img src="./assets/images/upcomming/stacks_tower.webp" class="game-inner-image"
+                                    width="100%" alt="Game Image">
+                            </div>
+                            <p class="game-name">Stacks Tower</p>
+                        </div>
+                    </a>
+                    <a href="#" class="not_clickable">
+                        <div class="game-item col-12">
+                            <div class="col-12 game-image">
+                                <img src="./assets/images/upcomming/where_is_the_ball.jpeg" class="game-inner-image"
+                                    width="100%" alt="Game Image">
+                            </div>
+                            <p class="game-name">Where is the Ball</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="accordion mt-5 faq" id="accordionPanelsStayOpenExample">
+                    <h4 class="text-white mb-4">FAQs</h4>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
+                                aria-controls="panelsStayOpen-collapseTwo">
+                                Can I play free games without installing?
+                            </button>
+                        </h2>
+                        <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
+                            <div class="accordion-body">
+                                <p>Yes, you can play our games for free without installing or downloading them. All you
+                                    need is a browser and an internet connection. Our games are compatible with
+                                    desktops, laptops, Chromebooks, smartphones, tablets, and more.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false"
+                                aria-controls="panelsStayOpen-collapseThree">
+                                What are the best free online games?
+                            </button>
+                        </h2>
+                        <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
+                            <div class="accordion-body">
+                                <p>Some of the best free online games available on LowCreditGames include Bubble
+                                    Wipeout, Mahjong At Home: Scandinavian Edition, Merge Mania, Chef Tycoon,
+                                    Cyberfusion, Mafia Billiard Tricks, Spider Solitaire, Basket Champs, Algerian
+                                    Solitaire, and Dragon Annihilation.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false"
+                                aria-controls="panelsStayOpen-collapseFour">
+                                What are free online games to play with friends?
+                            </button>
+                        </h2>
+                        <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse">
+                            <div class="accordion-body">
+                                <p>Enjoy playing with friends with our selection of games like Ludo with Friends, ZUNO,
+                                    Tic Tac Toe, and Ludo Dash.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#panelsStayOpen-collapseFive" aria-expanded="false"
+                                aria-controls="panelsStayOpen-collapseFive">
+                                What are the most popular online games genres?
+                            </button>
+                        </h2>
+                        <div id="panelsStayOpen-collapseFive" class="accordion-collapse collapse">
+                            <div class="accordion-body">
+                                <p>Popular game genres on LowCreditGames include crazy games, board games, adventure
+                                    games, puzzle games, and shooting games.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#panelsStayOpen-collapseSix" aria-expanded="false"
+                                aria-controls="panelsStayOpen-collapseSix">
+                                Do I need to sign up to play?
+                            </button>
+                        </h2>
+                        <div id="panelsStayOpen-collapseSix" class="accordion-collapse collapse">
+                            <div class="accordion-body">
+                                <p>No, you don’t need to sign up to play games on <a rel="noopener" target="_blank"
+                                        class="underline" href="https://lowcreditgames.com">LowCreditGames.com</a>. You
+                                    can start
+                                    playing instantly without any registration.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#panelsStayOpen-collapseSeven" aria-expanded="false"
+                                aria-controls="panelsStayOpen-collapseSeven">
+                                Is it safe to play online games​?
+                            </button>
+                        </h2>
+                        <div id="panelsStayOpen-collapseSeven" class="accordion-collapse collapse">
+                            <div class="accordion-body">
+                                <p>Yes, it’s safe to play online games on trusted platforms like LowCreditGames. Our
+                                    games don’t need downloads, minimizing malware risks. We focus on user security and
+                                    ensure a safe gaming experience without affecting your privacy or device
+                                    safety.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#panelsStayOpen-collapseEight" aria-expanded="false"
+                                aria-controls="panelsStayOpen-collapseEight">
+                                Are free games really free?
+                            </button>
+                        </h2>
+                        <div id="panelsStayOpen-collapseEight" class="accordion-collapse collapse">
+                            <div class="accordion-body">
+                                <p>Yes, free games are genuinely free to play on LowCreditGames. However, these games
+                                    may display ads to support the platform.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#panelsStayOpen-collapseNine" aria-expanded="false"
+                                aria-controls="panelsStayOpen-collapseNine">
+                                Are there free games for seniors online?
+                            </button>
+                        </h2>
+                        <div id="panelsStayOpen-collapseNine" class="accordion-collapse collapse">
+                            <div class="accordion-body">
+                                <p>Yes, we have free games for seniors that you can play online, including <a
+                                        rel="noopener" class="underline" target="_blank"
+                                        href="https://lowcreditgames.com/en/game/sudoku-classic/SJgx126Qc0H">Sudoku
+                                        Classic</a>, <a rel="noopener" class="underline" target="_blank"
+                                        href="https://lowcreditgames.com/en/game/solitaire-gold/rkPlk2T7qAr">Solitaire
+                                        Gold</a>, <a rel="noopener" class="underline" target="_blank"
+                                        href="https://lowcreditgames.com/en/game/chess-grandmaster/rkAXTzkD5kX">Chess
+                                        Grandmaster</a>, and more.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <footer class="footer d-flex justify-content-between align-items-center p-4">
+                    <div class="footer-left">
+                        <a href="./index.html">
+                            <img src="./assets/images/logo.png" alt="Logo" class="footer-logo logo">
+                        </a>
+                        <p class="footer-description mt-3">Welcome to Low Credit Games, your go-to platform for free and
+                            exciting online games. Join us for endless fun and entertainment.</p>
+                    </div>
+                    <div class="footer-right">
+                        <h4 class="footer-title text-white">Contact Us</h4>
+                        <p class="footer-contact mt-2">
+                            <span>Phone: 9154730244</span><br>
+                            <span>Email: contact@lowcreditgames.com</span>
+                        </p>
+                    </div>
+                </footer>
+                <div class="text-center mt-5 text-dark-light">
+                    Copyright's @ 2025 | All Rights Reserved Low Credit Games
+                </div>
+
+            </div>
+        </div>
+    </main>
+    <script>
+
+        window.addEventListener('load', function () {
+            document.querySelector('.pre-loader').style.transition = "opacity 0.5s";
+            document.querySelector('.pre-loader').style.opacity = "0";
+            setTimeout(() => {
+                document.querySelector('.pre-loader').style.display = "none";
+            }, 500);
+            document.querySelector('body').style.overflowY = 'auto'
+        });
+
+
+        window.addEventListener('resize', function () {
+            if (window.innerWidth > 768 && !window.location.hash.includes('desktop')) {
+                window.location.hash = 'desktop';
+                window.location.reload();
+            } else if (window.innerWidth <= 768 && !window.location.hash.includes('mobile')) {
+                window.location.hash = 'mobile';
+                window.location.reload();
+            }
+        });
+
+
+        function togglesidebar() {
+            if (document.querySelector(".side-bar").style.width === "0%") {
+                document.querySelector(".side-bar").style.width = "80%";
+                document.querySelector(".games-container").style.filter = "brightness(0.5)";
+                document.querySelector('.menu').setAttribute('src', './assets/images/close.svg');
+            } else {
+                document.querySelector(".side-bar").style.width = "0%";
+                document.querySelector(".games-container").style.filter = "brightness(1)";
+                document.querySelector('.menu').setAttribute('src', './assets/images/menu.svg');
+            }
+        }
+
+    </script>
+</body>
+
+</html>

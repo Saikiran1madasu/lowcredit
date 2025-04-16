@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width,user-scalable=no" />
+  <script src="https://codepen.io/steveg3003/pen/zBVakw"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r83/three.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+  <link rel="stylesheet" href="../assets/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&display=swap" rel="stylesheet">
+
+  <title>Talha - Tower Blocks</title>
+  <link rel="icon" href="https://i.ibb.co/M6KTWnf/pic.jpg" />
+
+  <!-- 👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻-->
+  <!-- Also uploaded the demo of this code in a gif : https://c.tenor.com/x8v1oNUOmg4AAAAd/tenor.gif-->
+  <!-- 👆🏻👆🏻👆🏻👆🏻👆🏻👆🏻👆🏻👆🏻👆🏻👆🏻👆🏻👆🏻👆🏻👆🏻👆🏻👆🏻👆🏻👆🏻👆🏻👆🏻👆🏻👆🏻👆🏻👆🏻👆🏻👆🏻👆🏻👆🏻👆🏻👆🏻👆🏻👆🏻👆🏻👆🏻👆🏻👆🏻👆🏻👆🏻👆🏻👆🏻👆🏻👆🏻👆🏻-->
+
+  <!-- 👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻-->
+  <!-- More html-css-js Games Calculators Games Cards Elements Projects on https://www.github.com/he-is-talha -->
+  <!-- 👆🏻👆🏻👆🏻👆🏻👆🏻👆🏻👆🏻👆🏻👆🏻👆🏻👆🏻👆🏻👆🏻👆🏻👆🏻👆🏻👆🏻👆🏻👆🏻👆🏻👆🏻👆🏻👆🏻👆🏻👆🏻👆🏻👆🏻👆🏻👆🏻👆🏻👆🏻👆🏻👆🏻👆🏻👆🏻👆🏻👆🏻👆🏻👆🏻👆🏻👆🏻👆🏻👆🏻-->
+
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .top-menu {
+      position: fixed;
+      z-index: 999;
+      top: 0px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px;
+      border-radius: 0 0 8px 8px;
+      /* border-bottom: 1px solid #415763; */
+      background-color: rgba(0, 0, 0, 0.425);
+      font-family: "Oxanium", sans-serif;
+      color: white;
+      text-decoration: none;
+    }
+
+    .logo {
+      width: 150px;
+      background-color: white;
+      border-radius: 30px;
+      padding: 0px 10px;
+      color: white;
+    }
+
+    .logo-text {
+      background: linear-gradient(0deg, #cacaca 0%, #ffffff 75%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: 600;
+      font-family: "Oxanium", sans-serif !important;
+      text-decoration: none;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    .back {
+            width: 45px;
+            background-color: white;
+            border-radius: 15px;
+        }
+
+    .developed {
+      margin-top: 10px;
+      text-align: center;
+    }
+
+    .developed a {
+      font-weight: 600;
+    }
+
+    @media screen and (max-width: 700px) {
+
+      .logo {
+        width: 100px;
+        height: auto;
+      }
+
+      .logo-text {
+        font-size: 16px;
+        /* margin-top: 10px; */
+      }
+    }
+
+    @media screen and (min-width: 701px) {
+      .back {
+        width: 60px;
+        background-color: white;
+        border-radius: 20px;
+      }
+    }
+
+  </style>
+
+</head>
+
+<body>
+  <div class="top-menu">
+    <div class="d-flex col-10 gap-lg-3 gap-2 align-items-center">
+      <a href="../index.html" class="back">
+        <img src="../assets/images/back.svg" alt="back">
+      </a>
+      <a href="../index.html" class="d-flex gap-2 align-items-center">
+        <img src="../assets/images/logo.png" alt="logo" class="logo">
+        <h4 class="logo-text m-0">LOW CREDIT <br> GAMES</h4>
+      </a>
+    </div>
+  </div>
+
+  <div id="container">
+    <div id="game"></div>
+    <div id="score">0</div>
+    <div id="instructions">
+      Click (or press the spacebar) to place the block
+    </div>
+    <div class="game-over">
+      <h2>Game Over</h2>
+      <p>You did great, you're the best.</p>
+      <p>Click or spacebar to start again</p>
+    </div>
+    <div class="game-ready">
+      <div id="start-button">Start</div>
+      <div></div>
+    </div>
+  </div>
+
+  <footer>
+    <p class="developed">Developed by the original owner, <a href="https://github.com/he-is-talha">Talha Bin Yousaf</a>.</p>
+  </footer>
+  
+  
+
+  <script src="script.js" async></script>
+</body>
+
+</html>

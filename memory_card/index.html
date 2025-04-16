@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="../assets/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&display=swap" rel="stylesheet">
+
+    <title>Memory Card Game</title>
+    <style>
+        .top-menu {
+            position: fixed;
+            z-index: 999;
+            top: 0px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 16px;
+            border-radius: 0 0 8px 8px;
+            /* border-bottom: 1px solid #415763; */
+            background-color: rgba(255, 255, 255, 0.0);
+            font-family: "Oxanium", sans-serif;
+            color: white;
+            text-decoration: none;
+        }
+
+        .logo {
+            width: 150px;
+            background-color: white;
+            border-radius: 30px;
+            padding: 0px 10px;
+            color: white;
+        }
+
+        .logo-text {
+            background: linear-gradient(0deg, #cacaca 0%, #ffffff 75%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 600;
+            font-family: "Oxanium", sans-serif !important;
+            text-decoration: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .back {
+            width: 45px;
+            background-color: white;
+            border-radius: 15px;
+        }
+
+        .developed {
+            margin-top: 10px;
+            text-align: center;
+        }
+
+        .developed a {
+            font-weight: 600;
+        }
+
+
+        @media screen and (max-width: 700px) {
+
+            .logo {
+                width: 100px;
+                height: auto;
+            }
+
+            .logo-text {
+                font-size: 16px;
+                /* margin-top: 10px; */
+            }
+        }
+
+        @media screen and (min-width: 701px) {
+      .back {
+        width: 60px;
+        background-color: white;
+        border-radius: 20px;
+      }
+    }
+
+    </style>
+</head>
+
+<body>
+    <div class="top-menu">
+        <div class="d-flex col-10 gap-lg-3 gap-2 align-items-center">
+          <a href="../index.html" class="back">
+            <img src="../assets/images/back.svg" alt="back">
+          </a>
+          <a href="../index.html" class="d-flex gap-2 align-items-center">
+            <img src="../assets/images/logo.png" alt="logo" class="logo">
+            <h4 class="logo-text m-0">LOW CREDIT <br> GAMES</h4>
+          </a>
+        </div>
+      </div>
+    
+
+    <div class="container">
+        <div id="dynamic-cards" class="game-container">
+            <div class="heading-container">
+                <img src="assets/title.webp" alt="GeeksforGeeks Logo" class="heading">
+                <h2 class="game-heading">Click any card to flip it!</h2>
+                <h2 class="game-heading">Match 2 cards of same type to win!</h2>
+            </div>
+            <div class="progress-container">
+                <div class="move-counter">Moves: 0</div>
+                <button id="restart" class="restart-button">
+                    Restart Game
+                </button>
+            </div>
+            <div class="cards-container">
+                <div class="card">
+                    <img src="./assets/flip.webp" class="outline-image">
+                    <img id="1" src="./assets/facebook.webp" alt="HTML Image" class="card-image">
+                </div>
+                <div class="card">
+                    <img src="./assets/flip.webp" class="outline-image">
+                    <img id="2" src="./assets/instagram.webp" alt="JavaScript Image" class="card-image">
+                </div>
+                <div class="card">
+                    <img src="./assets/flip.webp" class="outline-image">
+                    <img id="3" src="./assets/twitter.webp" alt="CSS Image" class="card-image">
+                </div>
+                <div class="card">
+                    <img src="./assets/flip.webp" class="outline-image">
+                    <img id="4" src="./assets/instagram.webp" alt="JavaScript Image" class="card-image">
+                </div>
+
+                <div class="card">
+                    <img src="./assets/flip.webp" class="outline-image">
+                    <img id="5" src="./assets/facebook.webp" alt="HTML Image" class="card-image">
+                </div>
+                <div class="card">
+                    <img src="./assets/flip.webp" class="outline-image">
+                    <img id="6" src="./assets/whatsapp.webp" alt="VUE Image" class="card-image">
+                </div>
+                <div class="card">
+                    <img src="./assets/flip.webp" class="outline-image">
+                    <img id="7" src="./assets/twitter.webp" alt="CSS Image" class="card-image">
+                </div>
+                <div class="card">
+                    <img src="./assets/flip.webp" class="outline-image">
+                    <img id="8" src="./assets/youtube.webp" alt="React Image" class="card-image">
+                </div>
+
+                <div class="card">
+                    <img src="./assets/flip.webp" class="outline-image">
+                    <img id="9" src="./assets/whatsapp.webp" alt="VUE Image" class="card-image">
+                </div>
+                <div class="card">
+                    <img src="./assets/flip.webp" class="outline-image">
+                    <img id="10" src="./assets/linkedin.webp" alt="Angular Image" class="card-image">
+                </div>
+                <div class="card">
+                    <img src="./assets/flip.webp" class="outline-image">
+                    <img id="11" src="./assets/youtube.webp" alt="React Image" class="card-image">
+                </div>
+                <div class="card">
+                    <img src="./assets/flip.webp" class="outline-image">
+                    <img id="12" src="./assets/linkedin.webp" alt="Angular Image" class="card-image">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

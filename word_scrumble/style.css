@@ -1,0 +1,111 @@
+* {
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	min-height: 50vh;
+	background: url(../assets/images/games_images/words_scramble.webp);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	backdrop-filter: blur(5px);
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow: clip;
+}
+
+.root {
+	font-size: x-large;
+	/* color: whitesmoke;  */
+	background: linear-gradient(135deg, #f5b172);
+	box-shadow: 0 2px 5px grey;
+	padding: 0% 2% 0% 2%;
+	text-align: center;
+	border-radius: 5px 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	width: 100%;
+	height: 80%;
+}
+
+.title {
+	border-bottom: 4px dashed;
+	border-color: rgb(2, 2, 2);
+}
+
+input {
+	font-size: 20px;
+	padding-left: 10px;
+	outline: 2px grey;
+}
+
+.heading {
+	font-style: oblique;
+	color: rgb(2, 2, 2);
+}
+
+.heading1 {
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.foot {
+	margin-bottom: 0%;
+	display: flex;
+	width: 100%;
+	justify-content: center;
+}
+
+.refresh {
+	background-color: #994c03 !important;
+	color: rgb(254 255 104) !important;
+}
+
+.foot>button {
+	width: 200px;
+	padding: 1%;
+	margin: 1%;
+	background-color: rgb(254 255 104);
+	border-radius: 25px;
+	border-color: rgb(255 255 255);
+	font-size: 20px;
+	color: #994c03;
+	font-family: Verdana, Geneva, Tahoma, sans-serif
+}
+
+@keyframes shakeAnimation {
+	0% {
+		transform: translateX(0);
+		background-color: red;
+	}
+
+	25% {
+		transform: translateX(-5px);
+	}
+
+	50% {
+		transform: translateX(5px);
+	}
+
+	75% {
+		transform: translateX(-5px);
+	}
+
+	100% {
+		background-color: white;
+		transform: translateX(0);
+	}
+}
+
+@media screen and (max-width: 700px) {
+	.title img {
+		width: 100%;
+	}
